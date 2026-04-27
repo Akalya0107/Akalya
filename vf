@@ -1,0 +1,11 @@
+words=["Manisha","Girija","Akalya","Dharshini"]
+words.sort()
+print(words)
+[24bec002@mepcolinux expt4]$python3 sort.py
+['Akalya', 'Dharshini', 'Girija', 'Manisha']
+[24bec002@mepcolinux expt4]$cat swap.py
+def swap_characters_and_combine(str1,str2):
+   swapped_str1=str2[:2]+str1[2:]
+   swapped_str2=str1[:2]+str2[2:]
+   return swapped_str1+" "+swapped_str2
+print(swap_characters_and_combine("ab","xy"))
