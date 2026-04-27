@@ -1,0 +1,6 @@
+#square a number
+a=int(input("Enter a number:"))
+b=a*a
+c=a*a*a
+print("square:",b)
+print("Cube:",c)
