@@ -1,0 +1,14 @@
+def divide_numbers(numerator, denominator):
+    if denominator == 0:
+        raise ZeroDivisionError("Denominator cannot be zero.")
+    return numerator / denominator
+
+try:
+    num = float(input("Enter the numerator: "))
+    denom = float(input("Enter the denominator: "))
+    result = divide_numbers(num, denom)
+    print(f"The result of the division is: {result}")
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
+except ValueError:
+    print("Please enter valid numbers.")
