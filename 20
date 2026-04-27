@@ -1,0 +1,12 @@
+def check_age(age):
+    if age < 0:
+        raise ValueError("Age cannot be negative.")
+    return f"Age is valid: {age}"
+
+try:
+    age = int(input("Enter the age of the person: "))
+    result = check_age(age)
+    print(result)
+except ValueError as e:  # Assigning the exception object to variable 'e'
+    error_message = e  # Assigning the exception object to another variable
+    print(f"Error: {error_message}")
