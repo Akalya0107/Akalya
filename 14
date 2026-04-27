@@ -1,0 +1,11 @@
+#roots
+import math
+a=1
+b=4
+c=2
+dis=(b**2)-(4*a*c)
+roots1=(-b-math.sqrt(dis))/(2*a)
+roots2=(-b+math.sqrt(dis))/(2*a)
+print("The roots are:")
+print(roots1)
+print(roots2)
