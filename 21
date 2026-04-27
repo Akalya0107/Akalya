@@ -1,0 +1,12 @@
+def get_number():
+    user_input = input("Enter a number: ")
+    if user_input.isnumeric():
+        return float(user_input)  # Convert to float for numerical operations
+    else:
+        raise ValueError("Input is not a valid number.")
+
+try:
+    number = get_number()
+    print(f"You entered the number: {number}")
+except ValueError as e:
+    print(f"Error: {e}")
