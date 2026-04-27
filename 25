@@ -1,0 +1,19 @@
+class LowBalanceError(Exception):
+    """Custom exception for low balance errors."""
+    pass
+
+def withdraw(balance, amount):
+    if amount > balance:
+        raise LowBalanceError("Withdrawal amount exceeds available balance.")
+    balance -= amount
+    return balance
+
+try:
+    current_balance = float(input("Enter your current balance: "))
+    withdrawal_amount = float(input("Enter withdrawal amount: "))
+    new_balance = withdraw(current_balance, withdrawal_amount)
+    print(f"Withdrawal successful. New balance: {new_balance}")
+except LowBalanceError as e:
+    print(f"Error: {e}")
+except ValueError:
+    print("Please enter valid numeric values.")
