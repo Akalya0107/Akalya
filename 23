@@ -1,0 +1,16 @@
+def get_element_by_index(lst, index):
+    try:
+        element = lst[index]
+        return element
+    except IndexError:
+        return "Error: Index is out of range."
+
+# Example list
+my_list = [10, 20, 30, 40, 50]
+
+try:
+    idx = int(input("Enter the index of the element to retrieve: "))
+    result = get_element_by_index(my_list, idx)
+    print(result)
+except ValueError:
+    print("Error: Please enter a valid integer index.")
