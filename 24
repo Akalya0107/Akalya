@@ -1,0 +1,14 @@
+def validate_email(email):
+    # Regular expression for validating an Email
+    email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+
+    if not re.match(email_pattern, email):
+        raise ValueError("Invalid email format.")
+    return "Email is valid."
+
+try:
+    user_email = input("Enter an email address: ")
+    result = validate_email(user_email)
+    print(result)
+except ValueError as e:
+    print(f"Error: {e}")
